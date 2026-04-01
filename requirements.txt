@@ -1,0 +1,34 @@
+# ── Core ML (compatible with pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime) ──
+torch==2.2.0
+torchvision==0.17.0
+torchaudio==2.2.0
+
+# ── NumPy — pinned below 2.0 to satisfy torch 2.2 + paddleocr ───────────────
+numpy>=1.24,<2.0
+
+# ── HuggingFace stack ────────────────────────────────────────────────────────
+transformers==4.40.2
+datasets==2.19.1
+accelerate==0.30.1
+
+# ── DeepSpeed ────────────────────────────────────────────────────────────────
+deepspeed==0.14.2
+
+# ── Embeddings & vector search ───────────────────────────────────────────────
+sentence-transformers==2.7.0
+faiss-gpu==1.7.2
+
+# ── OCR ──────────────────────────────────────────────────────────────────────
+paddlepaddle-gpu==2.6.1.post120   # must match CUDA 12.1
+paddleocr==2.7.3
+
+# ── OpenCV — 4.8.x is the last series supporting numpy<2.0 ──────────────────
+opencv-python-headless==4.8.1.78  # headless = no GUI deps, better for servers
+
+# ── API serving ──────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# ── Data science ─────────────────────────────────────────────────────────────
+pandas==2.2.2
+scikit-learn==1.4.2
